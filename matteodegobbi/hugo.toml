@@ -1,0 +1,4 @@
+baseURL = 'https://matteodegobbi.github.io/'
+languageCode = 'en-us'
+title = 'Matteo Site'
+theme = 'hugo-theme-terminal'

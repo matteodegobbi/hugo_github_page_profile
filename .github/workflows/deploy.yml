@@ -1,0 +1,31 @@
+name: Deploy Hugo Site
+
+on:
+  push:
+    branches: [ main ]  # or your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.147.8'
+          extended: true
+
+      - name: Build Hugo site
+        run: hugo --gc --minify --cleanDestinationDir
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.GH_PAGES_TOKEN }}
+          external_repository: yourusername/pages-repo
+          publish_dir: ./public
+          publish_branch: main  # or 'gh-pages' if that's your branch
+

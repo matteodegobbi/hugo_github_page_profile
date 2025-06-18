@@ -11,7 +11,7 @@ description = ""
 showFullContent = false
 readingTime = false
 hideComments = false
-categories = ["Code", "Deep Learning"]
+categories = ["Code"]
 +++
 ```cpp
 

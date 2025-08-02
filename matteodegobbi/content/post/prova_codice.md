@@ -1,6 +1,7 @@
 +++
-title = "Prova_codice"
 date = "2025-06-13T23:34:39+02:00"
+title = "Prova_codice"
+categories = ["Code"]
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting
 author = ""
 authorTwitter = "" #do not include @
@@ -11,7 +12,7 @@ description = ""
 showFullContent = false
 readingTime = false
 hideComments = false
-categories = ["Code"]
+draft=false
 +++
 ```cpp
 

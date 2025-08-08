@@ -165,24 +165,24 @@ We have that the output is made up of three terms:
 2. Integrative term, which means proportional to the sum of past errors
 3. Derivative term, meaning proportional to the difference between the current and previous error. (This is the part that incorporates the rate of change)
 
-The multiplicative constants $K_p,K_i,K_d$ are read from a configuration file.
+The multiplicative constants K_p,K_i,K_d are read from a configuration file.
 
 In this case we don't need to clip the delay to be below one second as the system is already stable, but we do need to clip it to not go below 0 as a negative delay makes no sense.
 
 This PID actor works much better without oscillations and it just requires to try a few combinations of the parameters to work.
-Some values of $K_p,K_i,K_d$ I found that work well are $1000,0,1000$, $1000,0,10000$ or $10000,0,10000$.
+Some values of K_p,K_i,K_d I found that work well are 1000,0,1000, 1000,0,10000 or 10000,0,10000.
 
-The constant $K_d$ of the derivative term has the effect of dampening oscillations and overshoots, but if it's increased too much 
+The constant K_d of the derivative term has the effect of dampening oscillations and overshoots, but if it's increased too much 
 it can make the system too slow to react to changes of regimes and to initially reach the 50% utilization.
 
 I found that the integral term is usually not needed as there isn't a drift in time from the wanted output. The only set
 of parameters I found an instance in which the integral term helps:
-with $K_p=100,K_d=10000$ the system has a small steady state error
-so adding a small integral term of $K_i=0.01$ removes this steady state error at the cost of some oscillation. Since this
-steady state error can also be removed by increasing $K_p$ without introducing oscillations I never wound up using the 
+with K_p=100,K_d=10000 the system has a small steady state error
+so adding a small integral term of K_i=0.01 removes this steady state error at the cost of some oscillation. Since this
+steady state error can also be removed by increasing K_p without introducing oscillations I never wound up using the 
 integral term but I left it implemented because in some systems it could be useful to counteract systemic noise.
 
-This example of adding the effect of adding $K_i=0.01$ can be seen in the figure below.
+This example of adding the effect of adding K_i=0.01 can be seen in the figure below.
 
 <figure>
   <img src="/example_plots/integral_steady_state/1percent_utilization.png" alt="Image 1">

@@ -83,6 +83,7 @@ The first method I implemented is called `naive_actor` in the code and it loops 
     int last_delay = (int)producer_delay;
     pthread_mutex_unlock(&mutex);
 ```
+
 this is a very simple implementation that just check whether
 the percent utilization of the buffer has gone above 55% or
 below 45% and decreases or increases the producer's rate by 20%.

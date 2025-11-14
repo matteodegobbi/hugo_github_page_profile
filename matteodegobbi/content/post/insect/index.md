@@ -5,6 +5,7 @@ title = 'Paper on Insect Species and Genus Classification 🐝🐞🐛'
 categories = ["Deep Learning"]
 tags = ["python","matlab","pytorch"]
 image = "img.png"
+weight = 1
 +++
 
 In February of this year we published a [paper](https://www.mdpi.com/1999-4893/18/2/105) on undescribed Insect species and genus classification using DNA and image data.

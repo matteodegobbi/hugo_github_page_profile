@@ -1,7 +1,7 @@
 +++
 date = '2024-05-18T01:27:57+02:00'
 draft = false 
-title = 'Solving the Vehicle Routing Problem with genetic algorithms'
+title = 'Solving the Vehicle Routing Problem with genetic algorithms 🧬'
 categories = ['Algorithms']
 tags=['python','genetic algorithms']
 image="/misc/vrp.jpg"

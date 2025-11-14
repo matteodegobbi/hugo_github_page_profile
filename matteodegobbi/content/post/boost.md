@@ -1,7 +1,7 @@
 +++
 date = '2024-09-18T02:06:52+02:00'
 draft = 'false' 
-title = 'Summer school BOOST 2024'
+title = 'Summer school BOOST 2024🌞'
 image = "boost.jpg"
 categories= ['Experiences']
 +++
